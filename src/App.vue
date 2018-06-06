@@ -1,31 +1,68 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <!-- <ul id="nav">
+      <router-link tag="li" to="/">Home</router-link>
+      <router-link tag="li" to="/about">About</router-link>
+    </ul> -->
+    <LeftNav></LeftNav>
+    <div class="page-container">
+      <transition name="page-change" mode="out-in">
+      <router-view/>
+    </transition>
     </div>
-    <router-view/>
   </div>
 </template>
 
+<script>
+import LeftNav from './components/LeftNav';
+export default {
+  components: {
+    LeftNav
+  }
+}
+</script>
+
+
 <style>
+html,body {
+  background-color: #eee;
+  margin: 0;
+  height: 100%;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  background-color: #fff;
+  color: #222;
+  height: 100%;
+  width: 75%;
+  margin: 0 auto;
+  position: relative;
 }
-#nav {
+
+.page-container {
+  overflow: hidden;
+}
+
+.page {
   padding: 30px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.page-change-enter, 
+.page-change-leave-to {
+  opacity: 0;
+  transform: translateX(-30%)
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.page-change-leave, 
+.page-change-enter-to {
+  opacity: 1;
+  transform: translateX(0)
+}
+
+.page-change-enter-active,
+.page-change-leave-active {
+  transition: all .3s;
 }
 </style>

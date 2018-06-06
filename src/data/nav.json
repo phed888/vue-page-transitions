@@ -1,0 +1,10 @@
+[
+  {
+    "pageName": "home",
+    "url": "/"
+  },
+  {
+    "pageName": "about",
+    "url": "/about"
+  }
+]
