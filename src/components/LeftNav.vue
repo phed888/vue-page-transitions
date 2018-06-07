@@ -1,6 +1,6 @@
 <template>
   <ul id="nav">
-    <router-link v-for="data in nav" :key="data.url" tag="li" :to="data.url" >{{ data.pageName }}</router-link>
+    <router-link v-for="data in nav" :key="data.id" tag="li" :to="data.url" >{{ data.pageName }}</router-link>
   </ul>
 </template>
 
