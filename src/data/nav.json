@@ -1,10 +1,12 @@
 [
   {
     "pageName": "home",
-    "url": "/"
+    "url": "/",
+    "description": "This is the home page"
   },
   {
     "pageName": "about",
-    "url": "/about"
+    "url": "/about",
+    "description": "This is the about page"
   }
 ]
