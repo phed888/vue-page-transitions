@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <!-- <ul id="nav">
-      <router-link tag="li" to="/">Home</router-link>
-      <router-link tag="li" to="/about">About</router-link>
-    </ul> -->
     <LeftNav></LeftNav>
     <div class="page-container">
       <transition name="page-change" mode="out-in">
